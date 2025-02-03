@@ -8,7 +8,7 @@ from PIL import Image                 # pillow
 from sklearn.model_selection import train_test_split
 
 img_dir = './Datasets/'               # 이미지 경로
-categories = ['horse*', 'human*']     # 분류할 태그
+categories = ['horse', 'human']     # 분류할 태그
 
 image_w = 150                         # 이미지 사이즈 지정 / 커질수록 성능이 좋아지지만 연산이 오래걸림
 image_h = 150                         # 300 x 300 => 150 x 150
