@@ -39,8 +39,8 @@ model.compile(loss = 'binary_crossentropy',
               optimizer = 'adam', metrics = ['accuracy'])
 
 # 과적합이 오면 멈춘다 = 'val_accuracy'가 patience = 7회 학습동안 정확도가 올라가지 않으면 멈춘다.
-# early_stopping = EarlyStopping(monitor = 'val_accuracy', patience = 7)
-early_stopping = EarlyStopping(monitor = 'val_loss', patience = 7)
+early_stopping = EarlyStopping(monitor = 'val_accuracy', patience = 7)
+# early_stopping = EarlyStopping(monitor = 'val_loss', patience = 7)
 fit_hist = model.fit(X_train, Y_train, batch_size = 64, epochs = 100,
                      validation_split = 0.15, callbacks = [early_stopping])
 
